@@ -1,10 +1,36 @@
-function Ticket(movie) {
+function Ticket(movie, time, age) {
   this.movie = movie;
-  this.time = [];
-  this.age = [];
+  this.time = time;
+  this.age = age;
 }
 
-function Time(evening, matinee) {
-  this.evening = evening;
-  this.matinee = matinee;
-}
+Ticket.prototype.newRelease = function() {
+
+  if (this.movie.length <= 10) {
+    return 2;
+  } else {
+    return 0;
+  }
+};
+
+Ticket.prototype.matinee = function () {
+  if (this.time === "Evening") {
+    return 2;
+  } else {
+    return 0;
+  }
+};
+
+Ticket.prototype.senior = function () {
+  if (this.age === "Senior") {
+    return 2;
+  } else {
+    return 0;
+  }
+};
+
+Ticket.prototype.ticketPrice = function () {
+  var price = 10;
+  var result = price + this.newRelease() + this.matinee() + this.senior();
+  return result;
+};
