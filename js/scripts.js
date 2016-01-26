@@ -34,3 +34,18 @@ Ticket.prototype.ticketPrice = function () {
   var result = price + this.newRelease() + this.matinee() + this.senior();
   return result;
 };
+
+function resetFields() {
+  $("input#newRelease").val("");
+  $("input#matinee").val("");
+  $("input#senior").val("");
+};
+
+$(document).ready(function() {
+  $("form#ticketSelect").submit(function(event) {
+
+    var inputMovie = #(this).find("input#newRelease").val();
+    var inputMatinee = #(this).find("input#matinee").val();
+    var inputTicketPrice = #(this).find("input#ticketPrice").val();
+  });
+});

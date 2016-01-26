@@ -11,6 +11,29 @@
   </head>
   <body>
     <div class="container">
+      <form id="ticketSelect">
+
+        <div class="form-group">
+         <label for="newRelease">Movie</label>
+         <input type="text" class="form-control" id="newRelease">
+        </div>
+
+         <label for="matinee">Showtime</label>
+         <select class="form-control" id="matinee">
+         <option value="NaN"></option>
+         <option value="Evening">Evening Showing</option>
+         <option value="Matinee">Matinee Showing</option>
+         </select>
+
+         <label for="senior">Ticket Type</label>
+         <select class="form-control" id="senior">
+         <option value="NaN"></option>
+         <option value="Regular">Regular Ticket</option>
+         <option value="Senior">Senior Ticket</option>
+        </select>
+        <br>
+        <input class="btn btn-success" type="submit" value="Get Ticket Price!">
+      </form>
 
     </div>
   </body>
