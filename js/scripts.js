@@ -43,9 +43,15 @@ function resetFields() {
 
 $(document).ready(function() {
   $("form#ticketSelect").submit(function(event) {
+    event.preventDefault();
 
     var inputMovie = #(this).find("input#newRelease").val();
-    var inputMatinee = #(this).find("input#matinee").val();
-    var inputTicketPrice = #(this).find("input#ticketPrice").val();
+    var inputMatinee = #(this).find("select#matinee").val();
+    var inputSenior = #(this).find("select#senior").val();
+    var confirmation = new Ticket(inputMovie, inputMatinee, inputSenior);
+
+    confirmation.ticketPrice();
+
+
   });
 });
